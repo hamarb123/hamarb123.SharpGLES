@@ -1,4 +1,4 @@
-SharpGLES
+hamarb123.SharpGLES
 =========
 
 OpenGL ES 2.0 for .NET Framework (Windows Forms) and the Universal Windows Platform (.NET)
