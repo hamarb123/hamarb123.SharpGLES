@@ -1,0 +1,141 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="12.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{CF294894-F871-4CC4-B947-FEED7967A49E}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>hamarb123.SharpGLES</RootNamespace>
+    <AssemblyName>hamarb123.SharpGLES</AssemblyName>
+    <TargetFrameworkVersion>v4.6.1</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <TargetFrameworkProfile />
+  </PropertyGroup>
+  <PropertyGroup>
+    <StartupObject />
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Debug|x64'">
+    <DebugSymbols>true</DebugSymbols>
+    <OutputPath>bin\DESKTOP\x64\Debug\</OutputPath>
+    <DefineConstants>TRACE;DEBUG;DESKTOP;x64</DefineConstants>
+    <DebugType>full</DebugType>
+    <PlatformTarget>x64</PlatformTarget>
+    <ErrorReport>prompt</ErrorReport>
+    <CodeAnalysisRuleSet>MinimumRecommendedRules.ruleset</CodeAnalysisRuleSet>
+    <BaseIntermediateOutputPath>obj\DESKTOP\</BaseIntermediateOutputPath>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Release|x64'">
+    <OutputPath>bin\DESKTOP\x64\Release\</OutputPath>
+    <DefineConstants>TRACE;DESKTOP;x64</DefineConstants>
+    <Optimize>true</Optimize>
+    <DebugType>pdbonly</DebugType>
+    <PlatformTarget>x64</PlatformTarget>
+    <ErrorReport>prompt</ErrorReport>
+    <CodeAnalysisRuleSet>MinimumRecommendedRules.ruleset</CodeAnalysisRuleSet>
+    <BaseIntermediateOutputPath>obj\DESKTOP\</BaseIntermediateOutputPath>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Debug|x86'">
+    <DebugSymbols>true</DebugSymbols>
+    <OutputPath>bin\DESKTOP\x86\Debug\</OutputPath>
+    <DefineConstants>TRACE;DEBUG;DESKTOP;x86</DefineConstants>
+    <DebugType>full</DebugType>
+    <PlatformTarget>x86</PlatformTarget>
+    <ErrorReport>prompt</ErrorReport>
+    <CodeAnalysisRuleSet>MinimumRecommendedRules.ruleset</CodeAnalysisRuleSet>
+    <BaseIntermediateOutputPath>obj\DESKTOP\</BaseIntermediateOutputPath>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Release|x86'">
+    <OutputPath>bin\DESKTOP\x86\Release\</OutputPath>
+    <DefineConstants>TRACE;DESKTOP;x86</DefineConstants>
+    <Optimize>true</Optimize>
+    <DebugType>pdbonly</DebugType>
+    <PlatformTarget>x86</PlatformTarget>
+    <ErrorReport>prompt</ErrorReport>
+    <CodeAnalysisRuleSet>MinimumRecommendedRules.ruleset</CodeAnalysisRuleSet>
+    <BaseIntermediateOutputPath>obj\DESKTOP\</BaseIntermediateOutputPath>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="EGLDisplay.cs" />
+    <Compile Include="EGLException.cs" />
+    <Compile Include="EGLX.cs" />
+    <Compile Include="GLESControl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="GLESControl.Designer.cs">
+      <DependentUpon>GLESControl.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GLUtils.cs" />
+    <Compile Include="GLBuffer.cs" />
+    <Compile Include="GLES20.cs" />
+    <Compile Include="EGLDC.cs" />
+    <Compile Include="EGL.cs" />
+    <Compile Include="LibrariesDesktopX64Debug.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>LibrariesDesktopX64Debug.resx</DependentUpon>
+    </Compile>
+    <Compile Include="LibrariesDesktopX64Release.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>LibrariesDesktopX64Release.resx</DependentUpon>
+    </Compile>
+    <Compile Include="LibrariesDesktopX86Debug.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>LibrariesDesktopX86Debug.resx</DependentUpon>
+    </Compile>
+    <Compile Include="LibrariesDesktopX86Release.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>LibrariesDesktopX86Release.resx</DependentUpon>
+    </Compile>
+    <Compile Include="LibrariesExtractor.cs" />
+    <Compile Include="Properties\AssemblyInfoDESKTOP.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="GLESControl.resx">
+      <DependentUpon>GLESControl.cs</DependentUpon>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup Condition="'$(Configuration)|$(Platform)' == 'Debug|x64'">
+    <EmbeddedResource Include="LibrariesDesktopX64Debug.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>LibrariesDesktopX64Debug.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup Condition="'$(Configuration)|$(Platform)' == 'Debug|x86'">
+    <EmbeddedResource Include="LibrariesDesktopX86Debug.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>LibrariesDesktopX86Debug.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup Condition="'$(Configuration)|$(Platform)' == 'Release|x64'">
+    <EmbeddedResource Include="LibrariesDesktopX64Release.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>LibrariesDesktopX64Release.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup Condition="'$(Configuration)|$(Platform)' == 'Release|x86'">
+    <EmbeddedResource Include="LibrariesDesktopX86Release.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>LibrariesDesktopX86Release.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>
