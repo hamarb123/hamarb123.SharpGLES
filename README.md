@@ -3,12 +3,6 @@ SharpGLES
 
 OpenGL ES 2.0 for .NET Framework (Windows Forms) and the Universal Windows Platform (.NET)
 
-Use via nuget:
-
-```
-PM> Install-Package hamarb123.SharpGLES
-```
-
 The are examples in the Examples folder.
 
 Based off of the code https://github.com/bitlush/SharpGLES
