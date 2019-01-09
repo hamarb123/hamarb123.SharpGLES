@@ -18,6 +18,7 @@ https://github.com/mono/SkiaSharp/blob/master/LICENSE.md
 Minimum versions project:
 * UWP: 10.0.10586
 * DESKTOP: .NET 4.6.1
+* x86 or x64 or ARM (UWP only), and NOT AnyCPU
 
 STEPS:
 1. Copy binaries from the built Binaries folder / releases page
