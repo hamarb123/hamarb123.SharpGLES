@@ -1,7 +1,7 @@
 ﻿using System;
 
 namespace hamarb123.SharpGLES
-
+{
 	public class EGLDisplay : IDisposable
 	{
 		private IntPtr _nativeDisplay;

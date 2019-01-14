@@ -39,16 +39,14 @@ namespace hamarb123.SharpGLES
 
 		public void Put(T[] data, int offset, int length)
 		{
-			Array.Copy(data, _position, _buffer, offset, length);
+			Array.Copy(data, offset, _buffer, _position, length);
 
 			_position += length;
 		}
 
 		public void Put(T[] data)
 		{
-			Put(data, _position, data.Length);
-
-			_position += data.Length;
+			Put(data, 0, data.Length);
 		}
 
 		public int Limit()
@@ -87,6 +85,11 @@ namespace hamarb123.SharpGLES
 		~GLBuffer()
 		{
 			Dispose(false);
+		}
+
+		public T[] GetArray()
+		{
+			return _buffer;
 		}
 	}
 }
